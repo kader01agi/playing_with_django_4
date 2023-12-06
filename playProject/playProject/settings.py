@@ -11,15 +11,16 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+# import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-tmplt_dir = Path(BASE_DIR).joinpath('templates')
+# tmplt_dir = Path(BASE_DIR).joinpath('templates')
+# tmplt_subdir = Path(BASE_DIR).joinpath('templates', 'temapp')
 
-# print(BASE_DIR)
-# print(tmplt_dir)
+# tmplt_dir = os.path.join(BASE_DIR, 'templates')
 
-""" Coomented by MAK
+""" Commented by MAK
+https://g.co/bard/share/839c1394a92e
 import os
 
 TEMPLATES = [
@@ -72,7 +73,7 @@ ROOT_URLCONF = 'playProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [tmplt_dir],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
