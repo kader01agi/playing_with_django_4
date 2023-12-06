@@ -14,7 +14,23 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+tmplt_dir = Path(BASE_DIR).joinpath('templates')
 
+# print(BASE_DIR)
+# print(tmplt_dir)
+
+""" Coomented by MAK
+import os
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
+    },
+]
+"""
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -56,7 +72,7 @@ ROOT_URLCONF = 'playProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [tmplt_dir],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
